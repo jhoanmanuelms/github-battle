@@ -3,12 +3,10 @@ let ReactDOM = require('react-dom');
 
 let FriendsContainer = React.createClass({
   render: function(){
-    var name = 'Jhoan Munoz'
-    var friends = ['Andres Bulla', 'Ramon Mesa', 'Carlos Clavijo']
     return (
       <div>
-        <h3> Name: {name} </h3>
-        <ShowList names={friends} />
+        <h3> Name: {this.props.name} </h3>
+        <ShowList names={this.props.friends} />
       </div>
     )
   }
@@ -31,6 +29,6 @@ let ShowList = React.createClass({
 });
 
 ReactDOM.render(
-  <FriendsContainer />,
+  <FriendsContainer name="Jhoan Munoz" friends={['Andres Bulla', 'Ramon Mesa', 'Carlos Clavijo']} />,
   document.getElementById('app')
 );
