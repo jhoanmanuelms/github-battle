@@ -2,7 +2,7 @@ let React = require('react');
 let ReactDOM = require('react-dom');
 
 let FriendsContainer = React.createClass({
-  render: () => {
+  render: function(){
     var name = 'Jhoan Munoz'
     var friends = ['Andres Bulla', 'Ramon Mesa', 'Carlos Clavijo']
     return (
@@ -15,7 +15,7 @@ let FriendsContainer = React.createClass({
 });
 
 let ShowList = React.createClass({
-  render: () => {
+  render: function(){
     var listItems = this.props.names.map(function(friend){
       return <li> {friend} </li>;
     });
