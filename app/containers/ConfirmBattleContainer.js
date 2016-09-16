@@ -7,14 +7,12 @@ var ConfirmBattleContainer = React.createClass({
     router: React.PropTypes.object.isRequired
   },
   getInitialState: function() {
-    console.log('getInitialState');
     return {
       isLoading: true,
       playersInfo: []
     }
   },
   componentDidMount: function() {
-    console.log('componentDidMount')
     var query = this.props.location.query;
     githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo])
       .then(function (players) {
